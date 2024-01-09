@@ -1,0 +1,18 @@
+class Solution:
+    def longestCommonPrefix(self, strs):
+        a=""
+        o=""
+        x=len(strs[0])
+        for i in range(0,x):
+            a=o
+            o=o+strs[0][i]
+            for b in range(1,len(strs)): 
+                if(strs[b].startswith(o)):
+                    pass
+                else:
+                    return a
+
+
+b=Solution()
+strs=["flower","flow","flight"]
+b.longestCommonPrefix(strs)
